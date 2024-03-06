@@ -20,7 +20,7 @@ export const HeaderContainer = styled.div`
   // }
 `;
 
-export const HeaderNav = styled.div`
+export const HeaderNav = styled.nav`
   display: flex;
   gap: 24px;
   padding: 0 24px;
@@ -30,17 +30,17 @@ export const HeaderLogo = styled.div`
   margin-right: 24px;
 `;
 
-export const HeaderLogoText = styled.div`
+export const HeaderLogoText = styled.span`
   font-weight: 900;
   font-size: 16px;
 `;
 
-export const HeaderItems = styled.div`
+export const HeaderItems = styled.ul`
   display: flex;
   gap: 24px;
 `;
 
-export const HeaderItem = styled.div`
+export const HeaderItem = styled.li`
   display: flex;
 `;
 
@@ -49,7 +49,7 @@ export const HeaderWrap = styled.div`
   gap: 12px;
 `;
 
-export const HeaderButtonLang = styled.div`
+export const HeaderButtonLang = styled.button`
   border: none;
   cursor: pointer;
 `;
