@@ -120,6 +120,12 @@ export const Filter = () => {
         ></input>
         <input type="range" id="range" min="0" max="100" value="50" step="1" />
       </form>
+
+      <button type="button">Reset filters</button>
+      <button type="button">Subscribe</button>
+      <a href="./index.html">
+        Get updates about new project related to these filters
+      </a>
     </FilterWrapper>
   );
 };
