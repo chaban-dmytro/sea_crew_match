@@ -1,4 +1,17 @@
-import { Thumb, SortWrap, Title } from "./ProjectCard.styled";
+import {
+  Thumb,
+  SortWrap,
+  Title,
+  Text,
+  Tags,
+  Item,
+  Options,
+  Option,
+  Name,
+  Wrap,
+  Salary,
+  SeeMoreBtn,
+} from "./ProjectCard.styled";
 
 export const ProjectCard = () => {
   return (
@@ -10,34 +23,43 @@ export const ProjectCard = () => {
         </span>
       </SortWrap>
       <Title>Whale hunting in the middle of nowhere</Title>
-      <p>
+      <Text>
         As freelancer you can make your own schedule that all be displayed to
         companies. Update it anytime and receive offers on the days you are free
         As freelancer you can make
-      </p>
-      <ul>
-        <li>Navigation</li>
-        <li>Seafood Processing</li>
-        <li>Deck Operations</li>
-      </ul>
-      <ul>
-        <li>
-          <span>Experience</span>
+      </Text>
+      <Tags>
+        <Item>Navigation</Item>
+        <Item>Seafood Processing</Item>
+        <Item>Deck Operations</Item>
+      </Tags>
+      <Options>
+        <Option>
+          <Name>Experience</Name>
           <span>3-5 years</span>
-        </li>
-        <li>
-          <span>Duration</span>
+        </Option>
+        <Option>
+          <Name>Duration</Name>
           <span>60 days</span>
-        </li>
-        <li>
-          <span>Schedule</span>
+        </Option>
+        <Option>
+          <Name>Schedule</Name>
           <span>Flexible</span>
-        </li>
-        <li>
-          <span>Location</span>
+        </Option>
+        <Option>
+          <Name>Location</Name>
           <span>Akureyri</span>
-        </li>
-      </ul>
+        </Option>
+      </Options>
+      <Wrap>
+        <Salary>
+          <span>20.00</span> ISK / hour
+        </Salary>
+        <span>
+          <SeeMoreBtn>See more</SeeMoreBtn>
+          <button>Favorite</button>
+        </span>
+      </Wrap>
     </Thumb>
   );
 };

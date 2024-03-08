@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+import "modern-normalize";
+
+export const GlobalStyle = createGlobalStyle`
 h1,
 h2,
 h3,
@@ -89,19 +93,25 @@ li {
   list-style: none;
 }
 
-img {
-  display: block;
-  height: auto;
-}
+  img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+  }
 
-a {
-  text-decoration: none;
-  font-style: normal;
-}
+  a {
+    text-decoration: none;
+    font-style: normal;
+  }
 
-body {
-  font-family: "Red Hat Display", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  box-sizing: border-box;
-}
+    body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    font-size: ${({ theme }) => theme.fontSize.h5};
+    line-height: 1.25;
+    color: ${({ theme }) => theme.colors.black};
+  }
+`;
