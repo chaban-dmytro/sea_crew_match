@@ -111,7 +111,7 @@ li {
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 500;
     font-size: ${({ theme }) => theme.fontSize.h5};
-    line-height: 1.25;
+    line-height: 1.5;
     color: ${({ theme }) => theme.colors.black};
   }
 `;

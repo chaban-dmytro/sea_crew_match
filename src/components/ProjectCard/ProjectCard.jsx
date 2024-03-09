@@ -11,7 +11,10 @@ import {
   Wrap,
   Salary,
   SeeMoreBtn,
+  FavoriteBtn,
+  HeatdIconSvg,
 } from "./ProjectCard.styled";
+import sprite from "../../images/sptite.svg";
 
 export const ProjectCard = () => {
   return (
@@ -56,8 +59,13 @@ export const ProjectCard = () => {
           <span>20.00</span> ISK / hour
         </Salary>
         <span>
-          <SeeMoreBtn>See more</SeeMoreBtn>
-          <button>Favorite</button>
+          <SeeMoreBtn type="button">See more</SeeMoreBtn>
+          <FavoriteBtn type="button">
+            Favorite
+            <HeatdIconSvg>
+              <use href={sprite + "#icon-u_heart-alt"}></use>
+            </HeatdIconSvg>
+          </FavoriteBtn>
         </span>
       </Wrap>
     </Thumb>

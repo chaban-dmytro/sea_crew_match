@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 const theme = {
   colors: {
     primary: "#1B87F0",
+    blue: "#0066CA",
     black: "#050D12",
     grey_action: "#050D12",
     grey_bg: "#EEEEEE",

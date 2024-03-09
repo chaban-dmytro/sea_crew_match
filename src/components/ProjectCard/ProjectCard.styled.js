@@ -78,8 +78,31 @@ export const SeeMoreBtn = styled.button`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.p2};
   background-color: ${({ theme }) => theme.colors.primary};
+  line-height: 1.5;
   border: transparent;
   border-radius: 8px;
   padding: 12px 24px;
   margin-right: 8px;
+`;
+
+export const FavoriteBtn = styled.button`
+  background-color: transparent;
+  border: transparent;
+  color: transparent;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  position: relative;
+`;
+
+export const HeatdIconSvg = styled.svg`
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 12px;
+  top: 12px;
+
+  &:hover {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
 `;
