@@ -75,12 +75,6 @@ export const Salary = styled.span`
 `;
 
 export const SeeMoreBtn = styled.button`
-  color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSize.p2};
-  background-color: ${({ theme }) => theme.colors.primary};
-  line-height: 1.5;
-  border: transparent;
-  border-radius: 8px;
   padding: 12px 24px;
   margin-right: 8px;
 `;

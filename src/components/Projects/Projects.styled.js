@@ -17,9 +17,32 @@ export const Tags = styled.ul`
 `;
 
 export const Tag = styled.ul`
-  border-radius: 8px;
-  border: 1px solid tomato;
-  padding: 6px 40px 6px 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-radius: 38px;
+  padding: 6px 8px 6px 16px;
+  background-color: ${({ theme }) => theme.colors.grey_bg};
+`;
+
+export const Button = styled.button`
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  position: relative;
+`;
+
+export const Svg = styled.svg`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  fill: ${({ theme }) => theme.colors.red};
+
+  &:hover {
+    fill: ${({ theme }) => theme.colors.black};
+  }
 `;
 
 export const SortWrap = styled.ul`

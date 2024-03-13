@@ -1,17 +1,69 @@
 import { ProjectCard } from "../ProjectCard/ProjectCard";
-import { Wrapper, Search, Tags, Tag, SortWrap, Sort } from "./Projects.styled";
+import {
+  Wrapper,
+  Search,
+  Tags,
+  Tag,
+  Button,
+  Svg,
+  SortWrap,
+  Sort,
+} from "./Projects.styled";
+import sprite from "../../images/sptite.svg";
 
 export const Projects = () => {
   return (
     <Wrapper>
       <Search type="text" name="search" />
       <Tags>
-        <Tag>Martime</Tag>
-        <Tag>Seafood Processing</Tag>
-        <Tag>35-410 ISK / hour</Tag>
-        <Tag>Navigation</Tag>
-        <Tag>Deck Operations</Tag>
-        <Tag>20-60 hours</Tag>
+        <Tag>
+          <p>Martime</p>
+          <Button type="button">
+            <Svg>
+              <use href={sprite + "#icon-u_multiply"}></use>
+            </Svg>
+          </Button>
+        </Tag>
+        <Tag>
+          <p>Seafood Processing</p>
+          <Button type="button">
+            <Svg>
+              <use href={sprite + "#icon-u_multiply"}></use>
+            </Svg>
+          </Button>
+        </Tag>
+        <Tag>
+          <p>35-410 ISK / hour</p>
+          <Button type="button">
+            <Svg>
+              <use href={sprite + "#icon-u_multiply"}></use>
+            </Svg>
+          </Button>
+        </Tag>
+        <Tag>
+          <p>Navigation</p>
+          <Button type="button">
+            <Svg>
+              <use href={sprite + "#icon-u_multiply"}></use>
+            </Svg>
+          </Button>
+        </Tag>
+        <Tag>
+          <p>Deck Operations</p>
+          <Button type="button">
+            <Svg>
+              <use href={sprite + "#icon-u_multiply"}></use>
+            </Svg>
+          </Button>
+        </Tag>
+        <Tag>
+          <p>20-60 hours</p>
+          <Button type="button">
+            <Svg>
+              <use href={sprite + "#icon-u_multiply"}></use>
+            </Svg>
+          </Button>
+        </Tag>
       </Tags>
       <SortWrap>
         <p>
@@ -28,7 +80,7 @@ export const Projects = () => {
         </Sort>
       </SortWrap>
       <ul>
-        <ProjectCard/>
+        <ProjectCard />
       </ul>
     </Wrapper>
   );

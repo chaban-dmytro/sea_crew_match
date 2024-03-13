@@ -104,7 +104,7 @@ li {
     font-style: normal;
   }
 
-    body {
+  body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -112,6 +112,28 @@ li {
     font-weight: 500;
     font-size: ${({ theme }) => theme.fontSize.h5};
     line-height: 1.5;
+    letter-spacing: .06em;
     color: ${({ theme }) => theme.colors.black};
+  }
+
+  button {
+    color: ${({ theme }) => theme.colors.white};
+    font-size: ${({ theme }) => theme.fontSize.p2};
+    background-color: ${({ theme }) => theme.colors.primary};
+    line-height: 1.5;
+    letter-spacing: .06em;
+    border: transparent;
+    border-radius: 8px;
+    leter-spacing: 6%;
+    cursor: pointer;
+  }
+
+  select,
+  input {
+     color: ${({ theme }) => theme.colors.grey_text};
+     padding: 12px;
+     width: 100%;
+     border: 1px solid ${({ theme }) => theme.colors.grey_stroke};
+     border-radius: 8px;
   }
 `;

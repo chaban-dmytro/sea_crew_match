@@ -12,6 +12,7 @@ const theme = {
     grey_action: "#050D12",
     grey_bg: "#EEEEEE",
     grey_text: "#989CA0",
+    grey_stroke: "#E9EBEE",
     white: "#FFFFFF",
     red: "#DF1010",
     succes: "#31C664",
