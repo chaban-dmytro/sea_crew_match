@@ -38,7 +38,9 @@ export const Header = () => {
         </HeaderItems>
       </HeaderNav>
       <HeaderWrap>
-        <HeaderButtonLang type="button">EN</HeaderButtonLang>
+        <HeaderButtonLang type="button" active>
+          EN
+        </HeaderButtonLang>
         <HeaderButtonLang type="button">ISL</HeaderButtonLang>
         <HeaderBtn type="button">
           <SearchIconSvg>

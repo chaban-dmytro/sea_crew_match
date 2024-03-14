@@ -23,6 +23,7 @@ export const HeaderContainer = styled.div`
 
 export const HeaderNav = styled.nav`
   display: flex;
+  align-items: center;
   gap: 24px;
 `;
 
@@ -59,6 +60,7 @@ export const HeaderItems = styled.ul`
 
 export const HeaderWrap = styled.div`
   display: flex;
+
   gap: 12px;
 `;
 
@@ -66,6 +68,13 @@ export const HeaderButtonLang = styled.button`
   border: none;
   cursor: pointer;
   background: transparent;
+  color: ${({ theme, active }) => {
+    if (active) {
+      return theme.colors.black;
+    } else {
+      return theme.colors.grey_text;
+    }
+  }};
 `;
 
 export const HeaderBtn = styled.button`

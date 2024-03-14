@@ -124,16 +124,29 @@ li {
     letter-spacing: .06em;
     border: transparent;
     border-radius: 8px;
-    leter-spacing: 6%;
+    letter-spacing: 6%;
     cursor: pointer;
+    
   }
 
   select,
   input {
-     color: ${({ theme }) => theme.colors.grey_text};
-     padding: 12px;
-     width: 100%;
-     border: 1px solid ${({ theme }) => theme.colors.grey_stroke};
-     border-radius: 8px;
+    color: ${({ theme }) => theme.colors.grey_text};
+    padding: 12px;
+    width: 100%;
+    border: 1px solid ${({ theme }) => theme.colors.grey_stroke};
+    border-radius: 8px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+
+     &::placeholder {
+      line-height: 1.5;
+      letter-spacing: 0.06em;
+     }
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.grey_text};
+    font-weight: 400;
   }
 `;

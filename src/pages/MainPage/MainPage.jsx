@@ -1,4 +1,5 @@
 import { Filter } from "../../components/Filter/Filter";
+import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { Projects } from "../../components/Projects/Projects";
 
@@ -14,6 +15,7 @@ export const MainPage = () => {
           <Filter />
           <Projects />
         </Wrapper>
+        <Footer />
       </Container>
     </>
   );

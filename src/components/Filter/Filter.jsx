@@ -71,7 +71,12 @@ export const Filter = () => {
       <FormRadio>
         <FormTitle>Project Type</FormTitle>
         <FormRadioLabel>
-          <FormRadioInput type="radio" name="project_type" value="Hourly" />
+          <FormRadioInput
+            type="radio"
+            name="project_type"
+            value="Hourly"
+            checked
+          />
           <FormRadioSpan></FormRadioSpan>
           Hourly
         </FormRadioLabel>
