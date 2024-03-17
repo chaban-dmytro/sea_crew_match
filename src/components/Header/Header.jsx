@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Logo from "../../images/logo.svg";
 import {
   HeaderContainer,
@@ -5,55 +6,61 @@ import {
   HeaderLogo,
   LogoImg,
   HeaderLogoText,
-  HeaderItems,
   HeaderWrap,
-  HeaderButtonLang,
   HeaderBtn,
   SearchIconSvg,
   PostBtn,
+  BurgerBtn,
 } from "./Header.styled";
 import sprite from "../../images/sptite.svg";
+import { Navigation } from "./Navigation.jsx/Navigation";
+import { Lang } from "./Lang/Lang";
+import { Modal } from "./Modal/Modal";
 
 export const Header = () => {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+
   return (
-    <HeaderContainer>
-      <HeaderNav>
-        <HeaderLogo href="./index.html">
-          <LogoImg src={Logo} alt="Logo" />
-          <HeaderLogoText>SeaCrewMatch</HeaderLogoText>
-        </HeaderLogo>
-        <HeaderItems>
-          <li>
-            <a href="./index.html">Find Sailors</a>
-          </li>
-          <li>
-            <a href="./index.html">Find a project</a>
-          </li>
-          <li>
-            <a href="./index.html">How it works</a>
-          </li>
-          <li>
-            <a href="./index.html">Support</a>
-          </li>
-        </HeaderItems>
-      </HeaderNav>
-      <HeaderWrap>
-        <HeaderButtonLang type="button" active>
-          EN
-        </HeaderButtonLang>
-        <HeaderButtonLang type="button">ISL</HeaderButtonLang>
-        <HeaderBtn type="button">
-          <SearchIconSvg>
-            <use href={sprite + "#icon-u_search"}></use>
-          </SearchIconSvg>
-        </HeaderBtn>
-        <HeaderBtn type="button">
-          <SearchIconSvg>
-            <use href={sprite + "#icon-u_user-circle"}></use>
-          </SearchIconSvg>
-        </HeaderBtn>
-        <PostBtn type="button">Post a project</PostBtn>
-      </HeaderWrap>
-    </HeaderContainer>
+    <>
+      {modal && <Modal onClose={toggleModal} />}
+      <HeaderContainer>
+        <HeaderNav>
+          <HeaderLogo href="./index.html">
+            <LogoImg src={Logo} alt="Logo" />
+            <HeaderLogoText>SeaCrewMatch</HeaderLogoText>
+          </HeaderLogo>
+          <Navigation />
+        </HeaderNav>
+        <HeaderWrap>
+          <Lang></Lang>
+          <HeaderBtn type="button">
+            <SearchIconSvg>
+              <use href={sprite + "#icon-u_search"}></use>
+            </SearchIconSvg>
+          </HeaderBtn>
+          <HeaderBtn type="button" user>
+            <SearchIconSvg>
+              <use href={sprite + "#icon-u_user-circle"}></use>
+            </SearchIconSvg>
+          </HeaderBtn>
+          <PostBtn type="button">Post a project</PostBtn>
+          <BurgerBtn type="button" onClick={toggleModal}>
+            <svg>
+              <use href={sprite + "#icon-u_hamburger-menu"}></use>
+            </svg>
+          </BurgerBtn>
+        </HeaderWrap>
+      </HeaderContainer>
+    </>
   );
 };

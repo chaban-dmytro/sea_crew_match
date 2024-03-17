@@ -6,32 +6,43 @@ export const HeaderContainer = styled.div`
   padding: 24px 10px;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
   align-items: center;
   margin: 0 auto;
 
-  // @media (min-width: 767px) {
-  //   background-size: contain;
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  // }
-
-  // @media (min-width: 1439px) {
-  //   height: 100%;
-  //   background-size: auto;
-  // }
+  @media (min-width: 767px) {
+    max-width: 1392px;
+    width: 100%;
+    padding: 24px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
 `;
 
 export const HeaderNav = styled.nav`
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
+
+  @media (min-width: 1080px) {
+    gap: 16px;
+  }
 `;
 
 export const HeaderLogo = styled.div`
   display: flex;
   gap: 16px;
   align-items: center;
-  margin-right: 24px;
+  margin-right: 16px;
+
+  @media (min-width: 1080px) {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-right: 24px;
+  }
 `;
 
 export const LogoImg = styled.img`
@@ -40,13 +51,19 @@ export const LogoImg = styled.img`
 `;
 
 export const HeaderLogoText = styled.span`
-  font-weight: 900;
-  font-size: 16px;
+  display: none;
+
+  @media (min-width: 1080px) {
+    display: block;
+    font-weight: 900;
+    font-size: 16px;
+  }
 `;
 
 export const HeaderItems = styled.ul`
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 8px;
 
   a {
     color: ${({ theme }) => theme.colors.black};
@@ -56,31 +73,35 @@ export const HeaderItems = styled.ul`
   :hover {
     color: ${({ theme }) => theme.colors.blue};
   }
+
+  @media (min-width: 1080px) {
+    gap: 24px;
+  }
 `;
 
 export const HeaderWrap = styled.div`
   display: flex;
-
   gap: 12px;
 `;
 
-export const HeaderButtonLang = styled.button`
+export const HeaderBtn = styled.button`
+  width: 48px;
+  height: 48px;
   border: none;
   cursor: pointer;
   background: transparent;
-  color: ${({ theme, active }) => {
-    if (active) {
-      return theme.colors.black;
+  position: relative;
+  ${({ user }) => {
+    if (user) {
+      return `display: none`;
     } else {
-      return theme.colors.grey_text;
+      return;
     }
   }};
-`;
 
-export const HeaderBtn = styled.button`
-  border: none;
-  cursor: pointer;
-  background: transparent;
+  @media (min-width: 767px) {
+    display: block;
+  }
 `;
 
 export const SearchIconSvg = styled.svg`
@@ -88,6 +109,10 @@ export const SearchIconSvg = styled.svg`
   height: 20px;
   background-color: transparent;
   border: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const PostBtn = styled.button`
@@ -100,8 +125,40 @@ export const PostBtn = styled.button`
   padding: 12px 24px;
   margin-right: 8px;
   cursor: pointer;
+  display: none;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.blue};
+  }
+
+  @media (min-width: 1080px) {
+    display: block;
+  }
+`;
+
+export const BurgerBtn = styled.button`
+  width: 48px;
+  height: 48px;
+  background-color: ${({ theme }) => theme.colors.grey_bg};
+  border: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+
+  svg {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (min-width: 767px) {
+    display: none;
   }
 `;

@@ -5,8 +5,12 @@ export const Wrapper = styled.div`
 `;
 
 export const SearchWrap = styled.div`
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   position: relative;
+
+  @media (min-width: 767px) {
+    margin-bottom: 48px;
+  }
 `;
 
 export const SearchInput = styled.input`
@@ -29,17 +33,19 @@ export const SearchBtn = styled.button`
 
 export const SearchSvg = styled.svg`
   position: absolute;
-  left: 0;
-  top: 0;
   width: 20px;
   height: 20px;
 `;
 
 export const Tags = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 32px;
+  display: none;
+
+  @media (min-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
 `;
 
 export const Tag = styled.ul`
@@ -60,8 +66,6 @@ export const Button = styled.button`
 
 export const Svg = styled.svg`
   position: absolute;
-  left: 0;
-  top: 0;
   width: 20px;
   height: 20px;
   fill: ${({ theme }) => theme.colors.red};
@@ -74,11 +78,18 @@ export const Svg = styled.svg`
 
 export const SortWrap = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
-  font-size: ${({ theme }) => theme.fontSize.h6};
-  margin-bottom: 8px;
+  gap: 40px;
+  margin-bottom: 16px;
+  font-size: ${({ theme }) => theme.fontSize.h5};
+
+  @media (min-width: 767px) {
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
 `;
 
 export const SortText = styled.p`
@@ -98,6 +109,7 @@ export const Sort = styled.div`
 
   label {
     font-weight: 800;
+    font-size: ${({ theme }) => theme.fontSize.h6};
     color: ${({ theme }) => theme.colors.grey_text};
     width: 100px;
     padding-left: 12px;
@@ -107,7 +119,6 @@ export const Sort = styled.div`
     color: ${({ theme }) => theme.colors.black};
     border: none;
     cursor: pointer;
-
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

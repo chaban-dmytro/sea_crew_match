@@ -4,9 +4,14 @@ export const Thumb = styled.div`
   background: white;
   border: 1px solid ${({ theme }) => theme.colors.grey_stroke};
   border-radius: 24px;
-  padding: 32px;
+  padding: 24px;
   text-align: left;
   font-size: 16px;
+  margin-bottom: 24px;
+
+  @media (min-width: 767px) {
+    padding: 32px;
+  }
 `;
 
 export const SortWrap = styled.div`
@@ -18,14 +23,34 @@ export const SortWrap = styled.div`
   color: ${({ theme }) => theme.colors.grey_text};
 `;
 
+export const SpanDate = styled.span`
+  font-size: ${({ theme }) => theme.fontSize.p3};
+  font-weight: 500;
+
+  span:first-child {
+    display: none;
+  }
+
+  @media (min-width: 767px) {
+    span:first-child {
+      display: inline;
+    }
+  }
+`;
+
 export const Title = styled.h4`
   font-weight: 900;
   margin-bottom: 16px;
 `;
 
 export const Text = styled.p`
-  font-weight: 400;
   margin-bottom: 32px;
+  font-size: ${({ theme }) => theme.fontSize.h6};
+
+  @media (min-width: 767px) {
+    font-weight: 400;
+    font-size: ${({ theme }) => theme.fontSize.h5};
+  }
 `;
 
 export const Tags = styled.ul`
@@ -34,6 +59,18 @@ export const Tags = styled.ul`
   gap: 8px;
   border-radius: 38px;
   margin-bottom: 32px;
+
+  li:last-child {
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
+
+  @media (min-width: 767px) {
+    li:last-child {
+      display: none;
+    }
+  }
 `;
 
 export const Item = styled.li`
@@ -66,8 +103,14 @@ export const Name = styled.span`
 
 export const Wrap = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 16px;
   justify-content: space-between;
-  align-items: center;
+
+  @media (min-width: 767px) {
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 export const Salary = styled.span`
@@ -77,6 +120,12 @@ export const Salary = styled.span`
 export const SeeMoreBtn = styled.button`
   padding: 12px 24px;
   margin-right: 8px;
+  width: calc(100% - 56px);
+  max-width: 300px;
+
+  @media (min-width: 767px) {
+    width: 125px;
+  }
 `;
 
 export const FavoriteBtn = styled.button`
@@ -93,8 +142,6 @@ export const HeatdIconSvg = styled.svg`
   position: absolute;
   width: 24px;
   height: 24px;
-  left: 12px;
-  top: 12px;
 
   &:hover {
     fill: ${({ theme }) => theme.colors.primary};

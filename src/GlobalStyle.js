@@ -114,18 +114,31 @@ li {
     line-height: 1.5;
     letter-spacing: .06em;
     color: ${({ theme }) => theme.colors.black};
+    
+    &.active-modal {
+      overflow-y: hidden;
+    }
   }
 
   button {
     color: ${({ theme }) => theme.colors.white};
     font-size: ${({ theme }) => theme.fontSize.p2};
     background-color: ${({ theme }) => theme.colors.primary};
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: .06em;
     border: transparent;
     border-radius: 8px;
     letter-spacing: 6%;
     cursor: pointer;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
     
   }
 

@@ -1,6 +1,7 @@
 import {
   Thumb,
   SortWrap,
+  SpanDate,
   Title,
   Text,
   Tags,
@@ -21,9 +22,11 @@ export const ProjectCard = () => {
     <Thumb>
       <SortWrap>
         <span>Transportation</span>
-        <span>
-          Published <span>3</span> ago
-        </span>
+        <SpanDate>
+          <span>Published </span>
+          <span>3d</span>
+          <span> ago</span>
+        </SpanDate>
       </SortWrap>
       <Title>Whale hunting in the middle of nowhere</Title>
       <Text>
@@ -35,6 +38,7 @@ export const ProjectCard = () => {
         <Item>Navigation</Item>
         <Item>Seafood Processing</Item>
         <Item>Deck Operations</Item>
+        <Item>+3</Item>
       </Tags>
       <Options>
         <Option>

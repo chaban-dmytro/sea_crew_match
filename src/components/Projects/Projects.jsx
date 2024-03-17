@@ -15,6 +15,7 @@ import {
   SortSvg,
 } from "./Projects.styled";
 import sprite from "../../images/sptite.svg";
+import { Pagination } from "../Pagination/Pagination";
 
 export const Projects = () => {
   return (
@@ -104,7 +105,11 @@ export const Projects = () => {
       </SortWrap>
       <ul>
         <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
       </ul>
+      <Pagination />
     </Wrapper>
   );
 };

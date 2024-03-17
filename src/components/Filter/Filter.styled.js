@@ -8,6 +8,11 @@ export const FilterWrapper = styled.div`
   align-items: flex-start;
   text-align: left;
   gap: 32px;
+  display: none;
+
+  @media (min-width: 767px) {
+    display: flex;
+  }
 `;
 
 export const Title = styled.h3`
@@ -38,7 +43,7 @@ export const FormCheckInput = styled.input`
   overflow: hidden;
   clip: rect(0 0 0 0);
 
-  &: checked + span {
+  &:checked + span {
     background-color: ${({ theme }) => theme.colors.primary};
     border-color: ${({ theme }) => theme.colors.primary};
 
@@ -90,7 +95,7 @@ export const FormRadioInput = styled.input`
   overflow: hidden;
   clip: rect(0 0 0 0);
 
-  &: checked + span {
+  &:checked + span {
     border: 2px solid ${({ theme }) => theme.colors.primary};
 
     &::after {
