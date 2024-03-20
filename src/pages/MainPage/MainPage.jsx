@@ -3,7 +3,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { Projects } from "../../components/Projects/Projects";
 
-import { Container, Title, Wrapper } from "./MainPage.styled";
+import { Container, Title, Wrapper, FilterWrap } from "./MainPage.styled";
 
 export const MainPage = () => {
   return (
@@ -12,7 +12,9 @@ export const MainPage = () => {
       <Container>
         <Title>Find your project</Title>
         <Wrapper>
-          <Filter />
+          <FilterWrap>
+            <Filter />
+          </FilterWrap>
           <Projects />
         </Wrapper>
       </Container>

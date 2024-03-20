@@ -12,20 +12,27 @@ import {
   FooterNav,
   FooterAddress,
   FilterBtn,
+  ModalFilters,
+  CloseBtn,
 } from "./Footer.styled";
 import sprite from "../../images/sptite.svg";
+import { Filter } from "../Filter/Filter";
 
 export const Footer = () => {
   const [modalFilters, setModal] = useState(false);
 
   const toggleModal = () => {
     setModal(!modalFilters);
-    console.log("Click");
+    console.log(modalFilters);
+  };
+
+  const onClose = () => {
+    setModal(!modalFilters);
+    console.log(modalFilters);
   };
 
   return (
     <>
-      {/* {modalFilters && <ModalFilters/>} */}
       <Border></Border>
       <FooterContainer>
         <div>
@@ -97,6 +104,15 @@ export const Footer = () => {
           </svg>
           <span>99</span>
         </FilterBtn>
+
+        <ModalFilters isOpen={modalFilters}>
+          <CloseBtn type="button" onClick={onClose}>
+            <svg>
+              <use href={sprite + "#icon-u_multiply"}></use>
+            </svg>
+          </CloseBtn>
+          <Filter />
+        </ModalFilters>
       </FooterContainer>
     </>
   );

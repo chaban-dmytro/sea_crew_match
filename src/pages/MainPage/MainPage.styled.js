@@ -23,8 +23,19 @@ export const Title = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
-  gap: 56px;
+  @media (min-width: 767px) {
+    display: flex;
+    gap: 56px;
+  }
+`;
+
+export const FilterWrap = styled.div`
+  display: none;
+
+  @media (min-width: 767px) {
+    display: flex;
+    max-width: 262px;
+  }
 `;
 
 export const Filter = styled.div`

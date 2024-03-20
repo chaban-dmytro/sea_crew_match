@@ -168,3 +168,48 @@ export const FilterBtn = styled.button`
     display: none;
   }
 `;
+
+export const ModalFilters = styled.div`
+  transition: transform 0.5s;
+  transform: ${({ isOpen }) => {
+    console.log(isOpen);
+    return isOpen ? `translateX(0)` : `translateX(-600px)`;
+  }};
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 375px;
+  padding: 32px;
+  background: ${({ theme }) => theme.colors.white};
+  -webkit-box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
+  box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
+  border-radius: 8px;
+
+  @media (min-width: 767px) {
+    display: none;
+  }
+`;
+
+export const CloseBtn = styled.button`
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  transition: transform 0.3s;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
