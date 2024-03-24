@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/sea_crew_match/static/css/main.65984377.css",
-    "main.js": "/sea_crew_match/static/js/main.7a6e18e8.js",
+    "main.js": "/sea_crew_match/static/js/main.41fd7935.js",
     "static/media/welcome-bg-desktop.jpg": "/sea_crew_match/static/media/welcome-bg-desktop.17371577ebe2ade1e8d3.jpg",
     "static/media/welcome-bg-mobile.jpg": "/sea_crew_match/static/media/welcome-bg-mobile.b154b6dbbd641dfa7106.jpg",
     "static/media/sptite.svg": "/sea_crew_match/static/media/sptite.4984a92ea8e39019c539a320b005f597.svg",
     "static/media/logo.svg": "/sea_crew_match/static/media/logo.4b2a7b63538106c0e47e1c9ab4c5fb62.svg",
     "index.html": "/sea_crew_match/index.html",
     "main.65984377.css.map": "/sea_crew_match/static/css/main.65984377.css.map",
-    "main.7a6e18e8.js.map": "/sea_crew_match/static/js/main.7a6e18e8.js.map"
+    "main.41fd7935.js.map": "/sea_crew_match/static/js/main.41fd7935.js.map"
   },
   "entrypoints": [
     "static/css/main.65984377.css",
-    "static/js/main.7a6e18e8.js"
+    "static/js/main.41fd7935.js"
   ]
 }
