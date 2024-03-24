@@ -54,8 +54,13 @@ export const HeaderLogo = styled.div`
 `;
 
 export const LogoImg = styled.img`
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
+
+  @media (min-width: 767px) {
+    width: 32px;
+    height: 32px;
+  }
 `;
 
 export const HeaderLogoText = styled.span`

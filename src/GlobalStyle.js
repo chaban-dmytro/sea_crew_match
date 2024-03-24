@@ -156,8 +156,6 @@ li {
     }
   }
 
- 
-
   select,
   input {
     color: ${({ theme }) => theme.colors.grey_text};
@@ -177,5 +175,15 @@ li {
   a {
     color: ${({ theme }) => theme.colors.grey_text};
     font-weight: 400;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 16px 72px 16px;
+
+  @media (min-width: 767px) {
+    max-width: 1120px;
+    padding: 0 10px 96px;
+  }
   }
 `;

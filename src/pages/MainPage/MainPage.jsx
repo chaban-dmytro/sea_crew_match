@@ -3,13 +3,13 @@ import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { Projects } from "../../components/Projects/Projects";
 
-import { Container, Title, Wrapper, FilterWrap } from "./MainPage.styled";
+import { Title, Wrapper, FilterWrap } from "./MainPage.styled";
 
 export const MainPage = () => {
   return (
     <>
       <Header />
-      <Container>
+      <div className="container">
         <Title>Find your project</Title>
         <Wrapper>
           <FilterWrap>
@@ -17,7 +17,7 @@ export const MainPage = () => {
           </FilterWrap>
           <Projects />
         </Wrapper>
-      </Container>
+      </div>
       <Footer />
     </>
   );

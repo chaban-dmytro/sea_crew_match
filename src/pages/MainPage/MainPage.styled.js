@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  margin: 0 auto;
-  padding: 0 16px 72px 16px;
-
-  @media (min-width: 767px) {
-    max-width: 1120px;
-    padding: 0 10px 96px;
-  }
-`;
-
 export const Title = styled.div`
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize.h3};
