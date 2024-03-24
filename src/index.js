@@ -33,8 +33,8 @@ const theme = {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode basename="/sea_crew_match">
-    <BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter basename="/sea_crew_match">
       <ThemeProvider theme={theme}>
         <App />
         <GlobalStyle />
