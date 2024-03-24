@@ -21,10 +21,18 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const HeaderNav = styled.nav`
+export const HeaderNav = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+
+  nav {
+    display: none;
+
+    @media (min-width: 767px) {
+      display: flex;
+    }
+  }
 
   @media (min-width: 1080px) {
     gap: 16px;
@@ -60,28 +68,36 @@ export const HeaderLogoText = styled.span`
   }
 `;
 
-export const HeaderItems = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 8px;
+// export const HeaderItems = styled.ul`
+//   display: flex;
+//   align-items: center;
+//   gap: 8px;
 
-  a {
-    color: ${({ theme }) => theme.colors.black};
-    font-weight: 400;
-  }
+//   a {
+//     color: ${({ theme }) => theme.colors.black};
+//     font-weight: 400;
+//   }
 
-  :hover {
-    color: ${({ theme }) => theme.colors.blue};
-  }
+//   :hover {
+//     color: ${({ theme }) => theme.colors.blue};
+//   }
 
-  @media (min-width: 1080px) {
-    gap: 24px;
-  }
-`;
+//   @media (min-width: 1080px) {
+//     gap: 24px;
+//   }
+// `;
 
 export const HeaderWrap = styled.div`
   display: flex;
   gap: 12px;
+
+  div {
+    display: none;
+
+    @media (min-width: 767px) {
+      display: flex;
+    }
+  }
 `;
 
 export const HeaderBtn = styled.button`

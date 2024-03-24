@@ -132,6 +132,7 @@ li {
     letter-spacing: 6%;
     cursor: pointer;
     position: relative;
+    transition: all 0.3s;
 
     svg {
       position: absolute;
@@ -139,8 +140,23 @@ li {
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.blue};
+    }
+
+    &.white {
+      background-color: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.colors.primary}; 
+      
+      &:hover {
+       color: ${({ theme }) => theme.colors.white}; 
+       background-color: ${({ theme }) => theme.colors.primary};
+      }
+    }
   }
+
+ 
 
   select,
   input {

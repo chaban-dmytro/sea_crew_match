@@ -12,10 +12,10 @@ import {
   SortWrap,
   SortText,
   Sort,
-  SortSvg,
 } from "./Projects.styled";
 import sprite from "../../images/sptite.svg";
 import { Pagination } from "../Pagination/Pagination";
+import { Select } from "../Filter/Select/Select";
 
 export const Projects = () => {
   return (
@@ -91,16 +91,8 @@ export const Projects = () => {
           <span>"Exapmle"</span>
         </SortText>
         <Sort>
-          <label for="sort">Sort by</label>
-          <select id="sort" name="sort">
-            <option value="date">Publication date</option>
-            <option value="rate">Ratting</option>
-          </select>
-          <SortSvg>
-            <svg>
-              <use href={sprite + "#icon-u_angle-down"}></use>
-            </svg>
-          </SortSvg>
+          <label htmlFor="select">Sort by</label>
+          <Select id="select" array={["Publication date", "Ratting"]} />
         </Sort>
       </SortWrap>
       <ul>

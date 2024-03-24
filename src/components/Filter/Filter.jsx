@@ -2,20 +2,23 @@ import {
   FilterWrapper,
   FormTitle,
   Title,
-  FormLabel,
-  FormDate,
   RestBtn,
   SubscribeBtn,
   FilterLink,
+  InputSelectWrapper,
 } from "./Filter.styled";
+import sprite from "../../images/sptite.svg";
 import { Range } from "./Range/Range";
 import { Checkbox } from "./Checkbox/Checkbox";
-import { Radio } from "./Radio/Ragio";
+import { Radio } from "./Radio/Radio";
+import { FormDate } from "./Date/FormDate";
+import { Select } from "./Select/Select";
 
 export const Filter = () => {
   return (
     <FilterWrapper>
       <Title>Filter</Title>
+
       <form>
         <FormTitle>Project Category</FormTitle>
         <Checkbox
@@ -46,28 +49,20 @@ export const Filter = () => {
         ></Range>
       </div>
 
-      <FormDate>
-        <FormTitle for="location">Location</FormTitle>
-        <select id="location" name="location">
-          <option value="select">Select city</option>
-          <option value="reykjavik">Reykjavik</option>
-          <option value="kopavogur ">Kopavogur</option>
-        </select>
-        <FormLabel for="starting_date">Project starting date</FormLabel>
-        <input
-          id="starting_date"
-          name="date"
-          type="date"
-          placeholder="Select date or range"
-        ></input>
-        <FormLabel for="publication_date">Publication date</FormLabel>
-        <input
-          id="publication_date"
-          name="date"
-          type="date"
-          placeholder="Select date"
-        ></input>
-      </FormDate>
+      <InputSelectWrapper>
+        <FormTitle>Location</FormTitle>
+        <Select array={["Select city", "Reykjavik", "Kopavogur"]} />
+      </InputSelectWrapper>
+
+      <InputSelectWrapper>
+        <FormTitle>Project starting date</FormTitle>
+        <FormDate text="Select date or range" />
+      </InputSelectWrapper>
+
+      <InputSelectWrapper>
+        <FormTitle>Publication date</FormTitle>
+        <FormDate text="Select date" />
+      </InputSelectWrapper>
 
       <form>
         <FormTitle>Skills</FormTitle>
@@ -98,7 +93,14 @@ export const Filter = () => {
 
       <div>
         <RestBtn type="button">Reset filters</RestBtn>
-        <SubscribeBtn type="button">Subscribe</SubscribeBtn>
+        <SubscribeBtn type="button">
+          <span>
+            <svg>
+              <use href={sprite + "#icon-u_heart-alt"}></use>
+            </svg>
+          </span>
+          <span>Subscribe</span>
+        </SubscribeBtn>
         <FilterLink href="./index.html">
           Get updates about new project related to these filters
         </FilterLink>

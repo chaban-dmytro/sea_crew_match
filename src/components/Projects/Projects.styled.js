@@ -28,6 +28,7 @@ export const SearchBtn = styled.button`
 
   &:hover {
     transform: scale(1.2);
+    background-color: transparent;
   }
 `;
 
@@ -62,6 +63,10 @@ export const Button = styled.button`
   width: 20px;
   height: 20px;
   position: relative;
+
+  &:hover {
+    background-color: transparent;
+  }
 `;
 
 export const Svg = styled.svg`
@@ -122,6 +127,7 @@ export const Sort = styled.div`
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    padding-right: 50px;
   }
 `;
 
@@ -129,6 +135,7 @@ export const SortSvg = styled.div`
   position: absolute;
   right: 11px;
   top: 11px;
+  pointer-events: none;
 
   svg {
     width: 23px;

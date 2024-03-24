@@ -7,18 +7,35 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   position: fixed;
-  width: 90%;
-  height: 100%;
-  height: 300px;
+  max-width: 320px;
+  width: 100%;
   padding: 16px;
   border: 1px solid ${({ theme }) => theme.colors.grey_bg};
   background: ${({ theme }) => theme.colors.white};
   -webkit-box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
   -moz-box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
   box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
+  transition: transform 0.5s;
+  transform: ${({ isModalOpen }) => {
+    return isModalOpen ? `translateX(0)` : `translateX(-800px)`;
+  }};
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 64px 0 64px 16px;
+  }
+
+  @media (min-width: 767px) {
+    display: none;
+  }
 `;
 
 export const Overlay = styled.div`
+  display: ${({ isModalOpen }) => {
+    return isModalOpen ? `block` : `none`;
+  }};
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -35,6 +52,7 @@ export const ModalHead = styled.div`
   display: flex;
   gap: 16px;
   justify-content: space-between;
+  padding-bottom: 20px;
 
   button {
     width: 24px;
@@ -75,19 +93,19 @@ export const LogoLink = styled.a`
   }
 `;
 
-export const Items = styled.ul`
+export const ButtonsWrap = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 24px 10px;
-  gap: 24px;
+  gap: 16px;
+  align-items: center;
 
-  a {
-    color: ${({ theme }) => theme.colors.black};
-    font-weight: 400;
+  div {
+    display: flex;
+    padding: 24px 10px;
   }
+`;
 
-  :hover {
-    color: ${({ theme }) => theme.colors.blue};
-  }
+export const Btn = styled.button`
+  width: 100%;
+  padding: 12px 0;
 `;

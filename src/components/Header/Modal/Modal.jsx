@@ -4,17 +4,19 @@ import {
   Wrapper,
   ModalHead,
   LogoLink,
-  Items,
+  ButtonsWrap,
+  Btn,
 } from "./Modal.styled";
 import Logo from "../../../images/logo.svg";
 import sprite from "../../../images/sptite.svg";
 import { Lang } from "../Lang/Lang";
+import { Navigation } from "../Navigation.jsx/Navigation";
 
-export const Modal = ({ onClose }) => {
+export const Modal = ({ onClose, isModalOpen }) => {
   return (
     <Container>
-      <Overlay onClick={onClose}></Overlay>
-      <Wrapper>
+      <Overlay onClick={onClose} isModalOpen={isModalOpen}></Overlay>
+      <Wrapper isModalOpen={isModalOpen}>
         <ModalHead>
           <LogoLink href="./index.html">
             <img src={Logo} alt="Logo" />
@@ -26,26 +28,18 @@ export const Modal = ({ onClose }) => {
             </svg>
           </button>
         </ModalHead>
-        <nav>
-          <Items>
-            <li>
-              {/* <Link>Find Sailors</Link> */}
-              <a href="./index.html">Find Sailors</a>
-            </li>
-            <li>
-              {/* <Link>Find a project</Link> */}
-              <a href="./index.html">Find a project</a>
-            </li>
-            <li>
-              <a href="./index.html">How it works</a>
-            </li>
-            <li>
-              {/* <Link>Support</Link> */}
-              <a href="./index.html">Support</a>
-            </li>
-          </Items>
-        </nav>
-        <Lang />
+        <div>
+          <Navigation />
+        </div>
+        <ButtonsWrap>
+          <div>
+            <Lang />
+          </div>
+          <Btn type="button">Sign Up</Btn>
+          <Btn type="button" className="white">
+            Log In
+          </Btn>
+        </ButtonsWrap>
       </Wrapper>
     </Container>
   );

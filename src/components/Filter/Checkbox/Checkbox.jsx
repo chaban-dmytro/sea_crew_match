@@ -17,18 +17,6 @@ export const Checkbox = ({ array }) => {
           </label>
         </li>
       ))}
-
-      {/* <li>
-        <label>
-          <input type="checkbox" name="fishing" value="fishing" />
-          <span>
-            <svg>
-              <use href={sprite + "#icon-u_check"}></use>
-            </svg>
-          </span>
-          Fishing
-        </label>
-      </li> */}
     </FormCheckbox>
   );
 };

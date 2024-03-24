@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
 export const HeaderButtonLang = styled.button`
-  display: none;
+  display: block;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: ${({ theme, active }) => {
+    if (active) {
+      return theme.colors.black;
+    } else {
+      return theme.colors.grey_text;
+    }
+  }};
 
-  @media (min-width: 767px) {
-    display: block;
-    border: none;
-    cursor: pointer;
+  &:hover {
     background: transparent;
-    color: ${({ theme, active }) => {
-      if (active) {
-        return theme.colors.black;
-      } else {
-        return theme.colors.grey_text;
-      }
-    }};
+    transform: scale(1.1);
   }
 `;

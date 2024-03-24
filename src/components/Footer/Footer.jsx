@@ -23,12 +23,10 @@ export const Footer = () => {
 
   const toggleModal = () => {
     setModal(!modalFilters);
-    console.log(modalFilters);
   };
 
   const onClose = () => {
     setModal(!modalFilters);
-    console.log(modalFilters);
   };
 
   return (
@@ -105,7 +103,7 @@ export const Footer = () => {
           <span>99</span>
         </FilterBtn>
 
-        <ModalFilters isOpen={modalFilters}>
+        <ModalFilters isModalOpen={modalFilters}>
           <CloseBtn type="button" onClick={onClose}>
             <svg>
               <use href={sprite + "#icon-u_multiply"}></use>

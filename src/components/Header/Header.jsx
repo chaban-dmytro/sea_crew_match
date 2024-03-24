@@ -32,7 +32,8 @@ export const Header = () => {
 
   return (
     <>
-      {modal && <Modal onClose={toggleModal} />}
+      {/* {modal && <Modal onClose={toggleModal} />} */}
+      <Modal onClose={toggleModal} isModalOpen={modal} />
       <HeaderContainer>
         <HeaderNav>
           <HeaderLogo href="./index.html">
@@ -42,7 +43,9 @@ export const Header = () => {
           <Navigation />
         </HeaderNav>
         <HeaderWrap>
-          <Lang></Lang>
+          <div>
+            <Lang></Lang>
+          </div>
           <HeaderBtn type="button">
             <SearchIconSvg>
               <use href={sprite + "#icon-u_search"}></use>

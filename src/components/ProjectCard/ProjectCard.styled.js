@@ -66,7 +66,15 @@ export const Tags = styled.ul`
     border: 1px solid ${({ theme }) => theme.colors.primary};
   }
 
+  li:not(:first-child):not(:last-child) {
+    display: none;
+  }
+
   @media (min-width: 767px) {
+    li:not(:first-child):not(:last-child) {
+      display: flex;
+    }
+
     li:last-child {
       display: none;
     }

@@ -171,9 +171,8 @@ export const FilterBtn = styled.button`
 
 export const ModalFilters = styled.div`
   transition: transform 0.5s;
-  transform: ${({ isOpen }) => {
-    console.log(isOpen);
-    return isOpen ? `translateX(0)` : `translateX(-600px)`;
+  transform: ${({ isModalOpen }) => {
+    return isModalOpen ? `translateX(0)` : `translateX(-600px)`;
   }};
   position: absolute;
   bottom: 0;

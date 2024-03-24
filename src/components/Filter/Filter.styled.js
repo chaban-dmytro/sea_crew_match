@@ -28,18 +28,6 @@ export const FormRange = styled.form`
   gap: 14px;
 `;
 
-export const FormLabel = styled.label`
-  font-weight: 800;
-  font-size: ${({ theme }) => theme.fontSize.h6};
-  color: ${({ theme }) => theme.colors.grey_text};
-`;
-
-export const FormDate = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-`;
-
 export const RestBtn = styled.button`
   padding: 12px 0;
   width: 100%;
@@ -49,13 +37,34 @@ export const RestBtn = styled.button`
 `;
 
 export const SubscribeBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  gap: 14px;
   padding: 12px 0;
   width: 100%;
   margin-bottom: 12px;
+
+  span {
+    display: block;
+  }
+
+  svg {
+    display: block;
+    position: relative;
+    left: 0;
+    transform: translate(0);
+    width: 23px;
+    height: 23px;
+    fill: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export const FilterLink = styled.a`
   color: ${({ theme }) => theme.colors.grey_text};
   display: block;
   text-align: center;
+`;
+
+export const InputSelectWrapper = styled.div`
+  width: 100%;
 `;
