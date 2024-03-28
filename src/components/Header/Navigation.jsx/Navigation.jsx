@@ -1,24 +1,21 @@
 import { Items } from "./Navigation.styled";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   return (
     <nav>
       <Items>
         <li>
-          {/* <Link>Find Sailors</Link> */}
-          <a href="./index.html">Find Sailors</a>
+          <Link to="/sailors">Find Sailors</Link>
         </li>
         <li>
-          {/* <Link>Find a project</Link> */}
-          <a href="./index.html">Find a project</a>
+          <Link to="/projects">Find a project</Link>
         </li>
         <li>
-          <a href="./index.html">How it works</a>
+          <Link to="/projects">How it works</Link>
         </li>
         <li>
-          {/* <Link>Support</Link> */}
-          <a href="./index.html">Support</a>
+          <Link to="/projects">Support</Link>
         </li>
       </Items>
     </nav>

@@ -16,6 +16,7 @@ import sprite from "../../images/sptite.svg";
 import { Navigation } from "./Navigation.jsx/Navigation";
 import { Lang } from "./Lang/Lang";
 import { Modal } from "./Modal/Modal";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [modal, setModal] = useState(false);
@@ -32,14 +33,15 @@ export const Header = () => {
 
   return (
     <>
-      {/* {modal && <Modal onClose={toggleModal} />} */}
       <Modal onClose={toggleModal} isModalOpen={modal} />
       <HeaderContainer>
         <HeaderNav>
-          <HeaderLogo href="./index.html">
-            <LogoImg src={Logo} alt="Logo" />
-            <HeaderLogoText>SeaCrewMatch</HeaderLogoText>
-          </HeaderLogo>
+          <Link to="/">
+            <HeaderLogo to="/">
+              <LogoImg src={Logo} alt="Logo" />
+              <HeaderLogoText>SeaCrewMatch</HeaderLogoText>
+            </HeaderLogo>
+          </Link>
           <Navigation />
         </HeaderNav>
         <HeaderWrap>

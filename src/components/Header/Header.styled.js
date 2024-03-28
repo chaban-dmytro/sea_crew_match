@@ -70,27 +70,9 @@ export const HeaderLogoText = styled.span`
     display: block;
     font-weight: 900;
     font-size: 16px;
+    color: ${({ theme }) => theme.colors.black};
   }
 `;
-
-// export const HeaderItems = styled.ul`
-//   display: flex;
-//   align-items: center;
-//   gap: 8px;
-
-//   a {
-//     color: ${({ theme }) => theme.colors.black};
-//     font-weight: 400;
-//   }
-
-//   :hover {
-//     color: ${({ theme }) => theme.colors.blue};
-//   }
-
-//   @media (min-width: 1080px) {
-//     gap: 24px;
-//   }
-// `;
 
 export const HeaderWrap = styled.div`
   display: flex;
