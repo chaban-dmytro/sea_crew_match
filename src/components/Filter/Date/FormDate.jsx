@@ -14,7 +14,6 @@ export const FormDate = ({ text }) => {
           onChange={(date) => setStartDate(date)}
           placeholderText={text}
           maxDate={new Date()}
-          closeOnScroll={true}
           dateFormat="dd/MM/yyyy"
         />
         <span>

@@ -8,9 +8,13 @@ import {
   Text,
   Title,
   Features,
+  Specialists,
 } from "./WelcomePage.styled";
 import sprite from "../../images/sptite.svg";
 import { Link } from "react-router-dom";
+import { SliderCard } from "../../components/Sliders/Sliders";
+import { SliderProjectCard } from "../../components/Sliders/SliderProjectCard";
+import { Articles } from "../../components/Articles/Articles";
 
 export const WelcomePage = () => {
   return (
@@ -134,6 +138,38 @@ export const WelcomePage = () => {
             </li>
           </ul>
         </Features>
+        <Specialists>
+          <Title>Featured Specialists</Title>
+          <Link to="/">
+            <svg>
+              <use href={sprite + "#icon-u_arrow-up-right"}></use>
+            </svg>
+            Explore for more
+          </Link>
+          <SliderCard />
+        </Specialists>
+        <Specialists>
+          <Title>Find your project</Title>
+          <Link to="/">
+            <svg>
+              <use href={sprite + "#icon-u_arrow-up-right"}></use>
+            </svg>
+            Explore for more
+          </Link>
+          <SliderProjectCard />
+        </Specialists>
+        <Specialists>
+          <Title>Stay tuned</Title>
+          <Link to="/">
+            <svg>
+              <use href={sprite + "#icon-u_arrow-up-right"}></use>
+            </svg>
+            More articles
+          </Link>
+          <div>
+            <Articles />
+          </div>
+        </Specialists>
       </div>
       <Footer />
     </>

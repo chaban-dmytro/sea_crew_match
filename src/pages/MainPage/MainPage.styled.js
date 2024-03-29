@@ -13,9 +13,12 @@ export const Title = styled.div`
 `;
 
 export const Wrapper = styled.div`
+  margin-bottom: 72px;
+
   @media (min-width: 767px) {
     display: flex;
     gap: 56px;
+    margin-bottom: 96px;
   }
 `;
 

@@ -179,11 +179,11 @@ li {
 
   .container {
     margin: 0 auto;
-    padding: 0 16px 72px 16px;
+    padding: 0 16px;
 
   @media (min-width: 767px) {
-    max-width: 1120px;
-    padding: 0 10px 96px;
+    max-width: 1140px;
+    padding: 0 10px;
   }
   }
 `;

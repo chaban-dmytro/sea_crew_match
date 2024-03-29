@@ -150,6 +150,10 @@ export const ImgWrap = styled.div`
 `;
 
 export const Features = styled.section`
+  margin-bottom: 120px;
+  @media (min-width: 767px) {
+    margin-bottom: 148px;
+  }
   ul {
     display: flex;
     flex-direction: column;
@@ -210,3 +214,134 @@ export const Features = styled.section`
     }
   }
 `;
+
+export const Specialists = styled.section`
+  margin-bottom: 120px;
+
+  h3 {
+    margin-bottom: 12px;
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.primary};
+    position: relative;
+    display: inline-block;
+    padding-right: 36px;
+    margin-bottom: 72px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      right: 0;
+      fill: ${({ theme }) => theme.colors.primary};
+      position: absolute;
+    }
+  }
+`;
+
+// export const Items = styled.ul`
+//   margin-top: 72px;
+
+//   @media (min-width: 767px) {
+//     display: flex;
+//     justify-content: center;
+//     gap: 24px;
+//   }
+// `;
+
+// export const Item = styled.li`
+//   display: flex;
+//   flex-direction: column;
+//   gap: 32px;
+//   padding: 32px;
+//   max-width: 326px;
+//   border: 1px solid ${({ theme }) => theme.colors.grey_stroke};
+//   border-radius: 24px;
+//   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+//   -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+//   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+
+//   @media (min-width: 767px) {
+//     box-shadow: none;
+//   }
+
+//   div {
+//     display: flex;
+//     align-items: center;
+//     gap: 18px;
+
+//     span {
+//       display: block;
+//     }
+
+//     span:first-child {
+//       width: 48px;
+//       height: 48px;
+//       border-radius: 50%;
+//       overflow: hidden;
+//     }
+
+//     h5 {
+//       font-size: ${({ theme }) => theme.fontSize.h5};
+//       font-weight: 900;
+//     }
+
+//     p {
+//       font-size: ${({ theme }) => theme.fontSize.p3};
+//       color: ${({ theme }) => theme.colors.grey_text};
+//     }
+//   }
+
+//   ul {
+//     display: flex;
+//     gap: 32px;
+
+//     span {
+//       display: block;
+//     }
+
+//     span:nth-child(1) {
+//       font-size: ${({ theme }) => theme.fontSize.h6};
+//       color: ${({ theme }) => theme.colors.grey_text};
+//       font-weight: 800;
+//     }
+
+//     span:nth-child(2) {
+//       font-size: ${({ theme }) => theme.fontSize.h5};
+//       font-weight: 900;
+//     }
+
+//     span:nth-child(3) {
+//       font-size: ${({ theme }) => theme.fontSize.p3};
+//       color: ${({ theme }) => theme.colors.grey_text};
+//       font-weight: 500;
+//     }
+//   }
+// `;
+
+// export const ButtonsWrap = styled.div`
+//   display: flex;
+//   gap: 8px;
+
+//   button:first-child {
+//     padding: 12px 33px;
+//   }
+
+//   button:nth-child(2),
+//   button:nth-child(3) {
+//     width: 48px;
+//     height: 48px;
+//     background: transparent;
+
+//     &:hover {
+//       svg {
+//         fill: ${({ theme }) => theme.colors.primary};
+//       }
+//     }
+
+//     svg {
+//       width: 20px;
+//       height: 20px;
+//     }
+//   }
+// `;
