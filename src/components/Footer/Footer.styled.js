@@ -177,13 +177,15 @@ export const ModalFilters = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 375px;
+  width: calc(100% - 90px);
   padding: 32px;
   background: ${({ theme }) => theme.colors.white};
   -webkit-box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
   -moz-box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
   box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.74);
   border-radius: 8px;
+  height: 100vh;
+  overflow-y: scroll;
 
   @media (min-width: 767px) {
     display: none;

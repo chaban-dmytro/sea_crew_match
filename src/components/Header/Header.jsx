@@ -53,7 +53,7 @@ export const Header = () => {
               <use href={sprite + "#icon-u_search"}></use>
             </SearchIconSvg>
           </HeaderBtn>
-          <HeaderBtn type="button" user>
+          <HeaderBtn type="button" user="true">
             <SearchIconSvg>
               <use href={sprite + "#icon-u_user-circle"}></use>
             </SearchIconSvg>

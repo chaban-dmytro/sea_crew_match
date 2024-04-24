@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { SliderCard } from "../../components/Sliders/Sliders";
 import { SliderProjectCard } from "../../components/Sliders/SliderProjectCard";
 import { Articles } from "../../components/Articles/Articles";
+import img from "../../images/welcome-bg-desktop.jpg";
 
 export const WelcomePage = () => {
   return (
@@ -35,10 +36,7 @@ export const WelcomePage = () => {
             <Title>Find sailor and we'll do the rest</Title>
           </div>
           <ImgWrap>
-            <img
-              src="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"
-              alt="img"
-            />
+            <img src={img} alt="img" />
           </ImgWrap>
           <ul>
             <li>
@@ -87,10 +85,7 @@ export const WelcomePage = () => {
           <ul>
             <li>
               <div>
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"
-                  alt="img"
-                />
+                <img src={img} alt="img" />
               </div>
               <div>
                 <h4>Calendar Integration</h4>
@@ -104,10 +99,7 @@ export const WelcomePage = () => {
             </li>
             <li>
               <div>
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"
-                  alt="img"
-                />
+                <img src={img} alt="img" />
               </div>
               <div>
                 <h4>Legal agreement wizard</h4>
@@ -121,10 +113,7 @@ export const WelcomePage = () => {
             </li>
             <li>
               <div>
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"
-                  alt="img"
-                />
+                <img src={img} alt="img" />
               </div>
               <div>
                 <h4>Reviews and Ratings</h4>

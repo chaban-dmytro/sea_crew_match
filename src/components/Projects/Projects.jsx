@@ -16,8 +16,35 @@ import {
 import sprite from "../../images/sptite.svg";
 import { Pagination } from "../Pagination/Pagination";
 import { Select } from "../Filter/Select/Select";
+import { useSearchParams } from "react-router-dom";
 
 export const Projects = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  // for (const [key, value] of searchParams.entries()) {
+  //   console.log(`${key}: ${value}`);
+  // }
+  const arrayTags = [];
+  for (const value of searchParams.values()) {
+    let array = [];
+    if (value.length !== 0) {
+      array = value.split(" ");
+    }
+    arrayTags.push(...array);
+  }
+
+  const toggleClick = (value) => {
+    searchParams.forEach((param, name) => {
+      if (param.includes(value)) {
+        const aray = param.split(" ").filter((item) => item !== value);
+        if (aray.length > 0) {
+          searchParams.set(name, aray.join(" "));
+        } else {
+          searchParams.delete(name);
+        }
+        setSearchParams(searchParams);
+      }
+    });
+  };
   return (
     <Wrapper>
       <SearchWrap>
@@ -34,54 +61,22 @@ export const Projects = () => {
       </SearchWrap>
 
       <Tags>
-        <Tag>
-          <p>Martime</p>
-          <Button type="button">
-            <Svg>
-              <use href={sprite + "#icon-u_multiply"}></use>
-            </Svg>
-          </Button>
-        </Tag>
-        <Tag>
-          <p>Seafood Processing</p>
-          <Button type="button">
-            <Svg>
-              <use href={sprite + "#icon-u_multiply"}></use>
-            </Svg>
-          </Button>
-        </Tag>
-        <Tag>
-          <p>35-410 ISK / hour</p>
-          <Button type="button">
-            <Svg>
-              <use href={sprite + "#icon-u_multiply"}></use>
-            </Svg>
-          </Button>
-        </Tag>
-        <Tag>
-          <p>Navigation</p>
-          <Button type="button">
-            <Svg>
-              <use href={sprite + "#icon-u_multiply"}></use>
-            </Svg>
-          </Button>
-        </Tag>
-        <Tag>
-          <p>Deck Operations</p>
-          <Button type="button">
-            <Svg>
-              <use href={sprite + "#icon-u_multiply"}></use>
-            </Svg>
-          </Button>
-        </Tag>
-        <Tag>
-          <p>20-60 hours</p>
-          <Button type="button">
-            <Svg>
-              <use href={sprite + "#icon-u_multiply"}></use>
-            </Svg>
-          </Button>
-        </Tag>
+        {arrayTags.map((item) => (
+          <Tag>
+            <p>{item.replace("_", " ")}</p>
+            <Button
+              type="button"
+              value={item}
+              onClick={(evt) => {
+                toggleClick(evt.currentTarget.value);
+              }}
+            >
+              <Svg>
+                <use href={sprite + "#icon-u_multiply"}></use>
+              </Svg>
+            </Button>
+          </Tag>
+        ))}
       </Tags>
 
       <SortWrap>
@@ -96,9 +91,6 @@ export const Projects = () => {
         </Sort>
       </SortWrap>
       <ul>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
         <ProjectCard />
       </ul>
       <Pagination />

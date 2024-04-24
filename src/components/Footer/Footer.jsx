@@ -18,7 +18,7 @@ import {
 import sprite from "../../images/sptite.svg";
 import { Filter } from "../Filter/Filter";
 
-export const Footer = () => {
+export const Footer = ({ isModal }) => {
   const [modalFilters, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -28,6 +28,12 @@ export const Footer = () => {
   const onClose = () => {
     setModal(!modalFilters);
   };
+
+  if (modalFilters) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
 
   return (
     <>
@@ -96,21 +102,24 @@ export const Footer = () => {
             </li>
           </ul>
         </FooterAddress>
-        <FilterBtn type="button" onClick={toggleModal}>
-          <svg>
-            <use href={sprite + "#icon-u_filter"}></use>
-          </svg>
-          <span>99</span>
-        </FilterBtn>
-
-        <ModalFilters isModalOpen={modalFilters}>
-          <CloseBtn type="button" onClick={onClose}>
-            <svg>
-              <use href={sprite + "#icon-u_multiply"}></use>
-            </svg>
-          </CloseBtn>
-          <Filter />
-        </ModalFilters>
+        {isModal && (
+          <>
+            <FilterBtn type="button" onClick={toggleModal}>
+              <svg>
+                <use href={sprite + "#icon-u_filter"}></use>
+              </svg>
+              <span>99</span>
+            </FilterBtn>
+            <ModalFilters isModalOpen={modalFilters}>
+              <CloseBtn type="button" onClick={onClose}>
+                <svg>
+                  <use href={sprite + "#icon-u_multiply"}></use>
+                </svg>
+              </CloseBtn>
+              <Filter />
+            </ModalFilters>
+          </>
+        )}
       </FooterContainer>
     </>
   );

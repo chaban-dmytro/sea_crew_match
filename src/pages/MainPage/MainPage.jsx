@@ -18,7 +18,7 @@ export const MainPage = () => {
           <Projects />
         </Wrapper>
       </div>
-      <Footer />
+      <Footer isModal="true" />
     </>
   );
 };

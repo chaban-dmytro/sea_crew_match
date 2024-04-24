@@ -22,6 +22,7 @@ export const Filter = () => {
       <form>
         <FormTitle>Project Category</FormTitle>
         <Checkbox
+          nameForm={"category"}
           array={[
             "Fishing",
             "Maritime",
@@ -33,7 +34,7 @@ export const Filter = () => {
 
       <form>
         <FormTitle>Project Type</FormTitle>
-        <Radio array={["Houry", "Fixed-price"]} />
+        <Radio nameForm={"type"} array={["Houry", "Fixed-price"]} />
       </form>
 
       <div>
@@ -67,13 +68,14 @@ export const Filter = () => {
       <form>
         <FormTitle>Skills</FormTitle>
         <Checkbox
+          nameForm={"skills"}
           array={[
             "Navigation",
             "Deck Operations",
-            "Seafood Handling",
-            "Navigation",
-            "Deck Operations",
-            "Seafood Handling",
+            "Sea Handling",
+            "Operations",
+            "Other",
+            "Handling",
           ]}
         />
       </form>

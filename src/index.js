@@ -9,6 +9,7 @@ const theme = {
   colors: {
     primary: "#1B87F0",
     blue: "#0066CA",
+    sky: "#D2E7FB",
     black: "#050D12",
     grey_action: "#050D12",
     grey_bg: "#EEEEEE",
